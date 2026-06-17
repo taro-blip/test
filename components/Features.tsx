@@ -1,55 +1,64 @@
 const features = [
   {
-    icon: "⚡",
+    number: "01",
     title: "高速パフォーマンス",
     description: "Next.js の最適化により、超高速なページ読み込みを実現。ユーザー体験を損ないません。",
   },
   {
-    icon: "🎨",
+    number: "02",
     title: "美しいデザイン",
-    description: "Tailwind CSS で構築された洗練された UI。どんなデバイスでも完璧に表示されます。",
+    description: "細部まで磨き上げられた UI。どんなデバイスでも完璧に表示されます。",
   },
   {
-    icon: "🔒",
+    number: "03",
     title: "セキュア",
-    description: "最新のセキュリティ標準に準拠。大切なデータを安全に守ります。",
+    description: "最新のセキュリティ標準に準拠。大切なデータを確実に守ります。",
   },
   {
-    icon: "📱",
+    number: "04",
     title: "レスポンシブ対応",
     description: "スマートフォンからデスクトップまで、あらゆる画面サイズに対応しています。",
   },
   {
-    icon: "🚀",
+    number: "05",
     title: "簡単デプロイ",
-    description: "Vercel との完璧な統合により、ワンクリックで本番環境へデプロイできます。",
+    description: "ワンクリックで本番環境へ。エンジニアの時間をより価値ある作業に。",
   },
   {
-    icon: "🛠",
+    number: "06",
     title: "カスタマイズ自在",
-    description: "柔軟な設計で、あなたのニーズに合わせて自由にカスタマイズできます。",
+    description: "柔軟な設計で、あなたのニーズに合わせて自由に拡張できます。",
   },
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 px-6 bg-gray-50">
+    <section id="features" className="bg-[#080808] py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">選ばれる理由</h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            私たちのプロダクトが多くの開発者に選ばれる6つの理由をご紹介します。
+        <div className="mb-20">
+          <p className="text-[#C9A84C] text-xs font-light tracking-[0.3em] uppercase mb-4">
+            Features
           </p>
+          <h2 className="text-4xl sm:text-5xl font-thin text-white tracking-tight">
+            選ばれる理由
+          </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
           {features.map((f) => (
             <div
-              key={f.title}
-              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+              key={f.number}
+              className="bg-[#080808] p-8 group hover:bg-[#0f0f0f] transition-colors duration-300"
             >
-              <div className="text-4xl mb-4">{f.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{f.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{f.description}</p>
+              <p className="text-[#C9A84C]/40 text-xs font-light tracking-[0.3em] mb-6 group-hover:text-[#C9A84C]/80 transition-colors">
+                {f.number}
+              </p>
+              <h3 className="text-white font-light text-lg mb-3 tracking-wide">
+                {f.title}
+              </h3>
+              <p className="text-white/30 text-sm font-light leading-relaxed">
+                {f.description}
+              </p>
             </div>
           ))}
         </div>
